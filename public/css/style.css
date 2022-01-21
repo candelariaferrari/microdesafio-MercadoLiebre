@@ -6,7 +6,6 @@
 body{
   font-family: 'Roboto', sans-serif;
   background-color: #ebebeb;
-
 }
 
 h3{
@@ -22,6 +21,8 @@ div.top-header{
 
 header{
   background-color: #EAC926;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 header div.logo{
@@ -33,7 +34,6 @@ header div.logo{
 }
 header nav{
   font-size: 12px;
-  padding: 15px;
 }
 
 header ul li{
@@ -47,10 +47,12 @@ header ul li a{
 
 header .form .input{
   background-color: #FFF;
-  border: 1px solid #000;
   outline: none;
   color: #666;
-  padding: 2px;
+  padding: 5px;
+  width: 100%;
+  border-radius: 15px;
+  font-size: 12px;
 }
 header .form .submit{
   background-color: #FFF;
@@ -82,11 +84,8 @@ div.burger-menu i{
 
 article div.main-article{
   width: 100%;
-  border-top: 1px solid #ebebeb;
 }
-.main-article i{
-  margin-top: 0.5em;
-}
+
 .price{
   font-size: 18px;
 }
@@ -106,20 +105,6 @@ section.banner img{
   width: 100%;
 }
 
-main{
-  width: 90%;
-  margin: auto;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-main section article{
-  background-color: #fff;
-  margin: 10px auto;
-  padding: 15px;
-  box-sizing: border-box;
-}
-
 main section article img{
   width: 100%;
 }
@@ -129,47 +114,178 @@ main section article i,
   color: #39b54a;
 }
 
-
-.last-visit h3{
-  margin: 0.5em auto;
+/*Clase 13 */
+main{
+  width: 90%; 
+  margin: auto;
+}
+main section article{
+  background-color: #fff;
+  margin: 10px auto;
+}
+article div.main-article{
+  box-sizing: border-box;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+  /* clase 14 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start ;
+}
+.description{
+  display: none;
+}
+header nav{
+  font-size: 12px;
+  display: none;
+}
+/* tablet */
+@media (min-width:361px){
+  main section article{
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.51);
+  }
+  .description{
+    display: block;
+  }
+  header nav{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+  }
+  header nav ul.left{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 45%;
+  }
+  header nav ul.right{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 45%;
+  }
+  header nav ul li {
+    margin-right: 15px;
+  }
+  div.burger-menu i{
+    display: none;
+  }
 }
 
-
-footer{
-  background-color: #Fff;
-  text-align: center;
- 
-}
-footer i{
-  font-size: 2em;
-  margin-bottom: 10px;
-  margin-left:1em;
-  margin-right: 1em;
-}
-footer h3{
-  font-size: 16px;
+/* Clase 14 */
+.content-price{
+  margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
-footer p {
-  font-size: 12px;
-  margin-bottom: 10px;
+.price{
+  width: 30%;
+  display: inline;
+}
+.discount{
+  width: 70%;
+  display: inline;
+
 }
 
-@media (max-width:360px) {
-  .description{
-    display: none;
+main section article i{
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #FFF;
+  border-radius: 50%;
+  right: 20px;
+  align-self: flex-end;
+  margin-top: -35px;
+  position: relative;
   }
-  nav{
-    display: none;
 
-  }
+
+i.fas.fa-truck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width:361px) {
-  main section article{
-    box-shadow : 0px 0px 10px rgba(100, 100, 100, 0.701);
+  .products{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    width: 100%;
   }
-  .burger-menu{
-    display: none;
+  article{
+    width: 90%;
+    box-sizing: border-box;
+  }
+  .top-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-header .logo{
+    width: 45%;
+  }
+  .top-header .form{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-header .buy{
+    width: 100%;
+  }
+  header .form .submit{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 22222;
+    margin-left: -30px;
+    padding: 5px;
+  }
+@media (min-width:361px){
+  .products{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  article{
+    width: 45%;
+    box-sizing: border-box;
+  }
+
+
+}
+@media (min-width:769px){
+  .products{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  article{
+    width: 20%;
+    box-sizing: border-box;
+  }
+  .top-header .logo{
+    width: 30%;
+  }
+  .top-header .form{
+    width: 30%;
+  }
+  .top-header .buy{
+    width: 30%;
   }
 }

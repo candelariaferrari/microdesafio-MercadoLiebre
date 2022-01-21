@@ -20,5 +20,4 @@ app.get('/',function(req, res){
 })
 
 
-// vincular css
 
