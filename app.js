@@ -19,5 +19,10 @@ app.get('/',function(req, res){
                         // dirname es una constante de node.js que hacer referencia al directorio del archivo que se esta ejecutando
 })
 
+app.get('/register',function(req, res){
+  res.sendFile(path.join(__dirname + '/views/register.html'));
+})
 
-
+app.get('/login',function(req, res){
+  res.sendFile(path.join(__dirname + '/views/login.html'));
+})

@@ -19,12 +19,12 @@
         <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
       </div>
       <div class="form" action="#" method="GET">
-        <div class="input">Buscar productos, marcas y más</div>
+        <div class="input">Buscar productos, marcas...</div>
         <div class="submit"><i class="fa fa-search"></i></div>
       </div>
       <p class="buy"><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
     </div>
-    <nav class="flex-nav">
+    <nav class="flexNav" id="navList">
       <ul class="left">
         <li><a href="#">Ofertas</a></li>
         <li><a href="#">Tiendas Oficiales</a></li>
@@ -37,7 +37,7 @@
         <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
       </ul>
     </nav>
-    <div class="burger-menu">
+    <div class="burger-menu" id="toggle-button">
       <i class="fa fa-bars burger"></i>
     </div>
   </header>
@@ -151,8 +151,37 @@
     </section>
   </main>
   <footer>
-
+    <div class="infoFooter">
+      <i class="fas fa-credit-card"></i>
+      <h4>Paga con tarjeta o efectivo</h4>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit.
+      </p>
+    </div>
+    <div class="infoFooter">
+      <i class="fas fa-gift"></i>
+      <h4>Paga con tarjeta o efectivo</h4>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. 
+      </p>
+    </div>
+    <div class="infoFooter">
+      <i class="fas fa-user-shield"></i>
+      <h4>Paga con tarjeta o efectivo</h4>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. 
+      </p>
+    </div>
   </footer>
+
+  <script>
+    const toggleButton = document.getElementById("toggle-button");
+    const navList = document.getElementById("navList");
+    toggleButton.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    })
+  </script>
+
 
 </body>
 
