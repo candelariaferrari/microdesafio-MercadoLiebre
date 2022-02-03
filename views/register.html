@@ -43,22 +43,24 @@
     <p class="categoriaInteres">
       <label>Interes</label>
       <div class="interest">
-        <div>
+        <div class="flexInterest">
           <input type="checkbox" name="interes" value="electro">Electro
-
         </div>
-
-        <input type="checkbox" name="interes" value="moda">Moda
-  
-        <input type="checkbox" name="interes" value="hogar">Hogar
-  
-        <input type="checkbox" name="interes" value="jugueteria">Jugueteria
-  
-        <input type="checkbox" name="interes" value="vida-sana">Vida Sana
-  
+        <div class="flexInterest">
+          <input type="checkbox" name="interes" value="moda">Moda
+        </div>
+        <div class="flexInterest">
+          <input type="checkbox" name="interes" value="hogar">Hogar
+        </div>
+        <div class="flexInterest">
+          <input type="checkbox" name="interes" value="jugueteria">Jugueteria
+        </div>
+        <div class="flexInterest">
+          <input type="checkbox" name="interes" value="vida-sana">Vida Sana
+        </div>
       </div>
     </p>
-    <p>
+    <p class="picture">
       <label for="picture">Foto de usuario</label>
       <input type="file" name="picture" accept=".jpg">
     </p>
@@ -69,11 +71,12 @@
       <input type="password" name="confirm-pass" id="confirm-pass" placeholder="Confirmacion de contraseña">
     </p>
     <div class="contentBtn">
-      <button type="submit">
-        <a href="/">Enviar</a>
-      </button>
-      <button type="reset">
+    
+      <button type="reset" class="delete">
         Borrar
+      </button>
+      <button type="submit" class="send">
+        <a href="/">Enviar</a>
       </button>
     </div>
   </form>

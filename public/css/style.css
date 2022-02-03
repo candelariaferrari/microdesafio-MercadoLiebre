@@ -320,15 +320,14 @@ footer {
   }
 }
 
-
 /* ----- Form Responsive ----- */
-form.formRegister{
+form.formRegister {
   width: 90%;
   margin: 1em auto;
   padding: 0.5em;
   box-sizing: border-box;
 }
-form.formRegister input{
+form.formRegister input {
   outline: none;
   border: none;
   width: 100%;
@@ -336,20 +335,21 @@ form.formRegister input{
   border-radius: 5px;
   margin: 0.5em auto;
 }
-form.formRegister h2{
+form.formRegister h2 {
   font-size: 18px;
   margin: 0.5em auto;
   font-weight: 400;
 }
-form.formRegister input[type="date"]{
+form.formRegister input[type="date"] {
   background-color: #fff;
 }
 .perfilUsuario label,
-.categoriaInteres label{
+.categoriaInteres label,
+.picture label  {
   font-size: 18px;
   margin: 0.5em auto;
 }
-.contentInput{
+.contentInput {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -358,7 +358,7 @@ form.formRegister input[type="date"]{
   width: 100%;
 }
 
-.interest{
+.interest {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -367,7 +367,17 @@ form.formRegister input[type="date"]{
   margin: 0.5em auto;
   width: 100%;
 }
-.interest input[type="checkbox"]{
+.flexInterest {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.interest .flexInterest input[type="checkbox"]{
+  width: fit-content;
+  margin: 0.5em;
+}
+.interest input[type="checkbox"] {
   display: inline;
   width: 100%;
   margin: 0em;
@@ -382,10 +392,33 @@ input:invalid {
 }
 input:invalid:focus {
   background-color: red;
-  content: 'Insuficientes caracteres';
+  content: "Insuficientes caracteres";
   color: black;
-
 }
+
+.contentBtn{
+  display: flex;
+  justify-content: flex-end;
+}
+button.send{
+  outline: none;
+  border: none;
+  background-color: #eac926;
+  padding: 0.5em;
+}
+button.delete{
+  outline: none;
+  border: none;
+  background-color: #0044aa;
+  padding: 0.5em;
+  margin-right: 0.5em;
+  color: #eac926;
+}
+button.send a{
+  text-decoration: none;
+  color: #0044aa;
+}
+
 /* notebook and desktop */
 @media (min-width: 769px) {
   .products {
@@ -396,12 +429,10 @@ input:invalid:focus {
   .products article {
     margin: auto 0.5em;
     width: 25%;
-}
-.content-price {
-
-  justify-content: space-around;
-
-}
+  }
+  .content-price {
+    justify-content: space-around;
+  }
   .top-header .logo {
     width: 30%;
   }
