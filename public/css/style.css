@@ -431,7 +431,7 @@ button.send a{
     width: 25%;
   }
   .content-price {
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .top-header .logo {
     width: 30%;
