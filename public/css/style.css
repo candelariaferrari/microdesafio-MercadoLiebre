@@ -421,6 +421,9 @@ button.send a{
 
 /* notebook and desktop */
 @media (min-width: 769px) {
+  header .form .input{
+    font-size: 16px;
+  }
   .products {
     display: flex;
     flex-flow: row nowrap;
