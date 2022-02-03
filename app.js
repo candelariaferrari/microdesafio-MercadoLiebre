@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.listen(3000,()=> console.log('Microdesafio Mercado Liebre'));
-
+//app.listen(3000,()=> console.log('Microdesafio Mercado Liebre'));
+app.listen(process.env.PORT || 3000,function(){
+  console.log('servidor corriendo puerto 3000');
+})
 /// en la carpeta public tienen que ir las imagenes, css y js para front
 //opcion 1
 /* const publicPath= path.resolve(__dirname, './public')
